@@ -53,10 +53,10 @@ function newElement() {
          }
 }
 
-//create sub-list items
+//create sub-list items //currently inactive
 
 function newSubListing() {
-    let subli = document.createElement('subli');
+    let subli = document.createElement('li');
     let inputValue = document.getElementById("subInput").value;
     let st = document.createTextNode(inputValue);
     subli.appendChild(st);
@@ -66,7 +66,7 @@ function newSubListing() {
         document.getElementById('subli').appendChild(subli);
     }
     document.getElementById("mySubList").value = "";
-    
+
     let span = document.createElement("SPAN");
     let txt = document.createTextNode("\u00D7");
     span.className ="close";
@@ -79,3 +79,7 @@ function newSubListing() {
      }
     }
 }
+
+// local storage of to- do list
+
+localStorage.setItem('myUL', 1)
